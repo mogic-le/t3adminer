@@ -130,7 +130,7 @@ form table.nowrap a[href*="edit="][href*="&where"]:hover {
 }
 
 table.nowrap a[href*="edit="][href*="&where"]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document-open.svg");
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-open.svg");
 	content: " ";
 	display: inline-block;
 	font-size: 16px;
@@ -254,7 +254,7 @@ p#tables a[href*="select="] {
 }
 
 p#tables a[href*="select="]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document.svg") -16px 0;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-document.svg") -16px 0;
 	content: " ";
 	display: inline-block;
 	font-size: 15px;
@@ -339,7 +339,7 @@ p#tables span.tables-line:hover {
 }
 
 #menu p.links a[href*="import="]:before {
-	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document-import-t3d.svg) no-repeat 6px 6px;
+	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-database-import.svg) no-repeat 6px 6px;
 	-webkit-background-size: 16px;
 	background-size: 16px;
 	content: " ";
@@ -368,7 +368,7 @@ p#tables span.tables-line:hover {
 }
 
 #menu p.links a[href*="dump="]:before {
-	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document-export-t3d.svg) no-repeat 6px 6px;
+	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-database-export.svg) no-repeat 6px 6px;
 	-webkit-background-size: 16px;
 	background-size: 16px;
 	content: " ";
@@ -397,7 +397,7 @@ p#tables span.tables-line:hover {
 }
 
 #menu p.links a[href*="create="]:before {
-	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document-new.svg) no-repeat 6px 6px;
+	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-document-add.svg) no-repeat 6px 6px;
 	-webkit-background-size: 16px;
 	background-size: 16px;
 	content: " ";
@@ -424,7 +424,7 @@ p#tables span.tables-line:hover {
 }
 
 #content a[href*="refresh="]:before {
-	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-refresh.svg) no-repeat -16px 0;
+	background: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-refresh.svg) no-repeat -16px 0;
 	content: " ";
 	display: inline-block;
 	font-size: 15px;
@@ -470,7 +470,7 @@ p#tables span.tables-line:hover {
 }
 
 #content a[href*="host="]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-document-open.svg");
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-open.svg");
 	content: " ";
 	display: inline-block;
 	font-size: 16px;
@@ -760,7 +760,7 @@ p.logout input {
 }
 
 .js .column a[href*="desc%5B0%5D=1"]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-move-down.svg") no-repeat scroll 1px 4px / 10px auto;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-down.svg") no-repeat scroll 1px 4px / 10px auto;
 	content: " ";
 	display: inline-block;
 	height: 16px;
@@ -780,7 +780,7 @@ p.logout input {
 }
 
 .js .column a[href*="fieldset-search"]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-search.svg") no-repeat scroll 1px 4px / 10px auto;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-search.svg") no-repeat scroll 1px 4px / 10px auto;
 	content: " ";
 	display: inline-block;
 	height: 16px;
@@ -825,7 +825,7 @@ p.pages a:hover {
 }
 
 input[type="image"][name^="add"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-add.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-add.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -836,7 +836,7 @@ input[type="image"][name^="add"] {
 }
 
 table.nowrap input[type="image"][name^="add"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-add.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-add.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -865,7 +865,7 @@ table.nowrap thead input[type="image"][name^="add"]:hover {
 }
 
 table.nowrap input[type="image"][name^="down"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-move-down.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-down.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -881,7 +881,7 @@ table.nowrap input[type="image"][name^="down"]:hover {
 }
 
 table.nowrap input[type="image"][name^="drop_col"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-delete.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-delete.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -897,7 +897,7 @@ table.nowrap input[type="image"][name^="drop_col"]:hover {
 }
 
 table.nowrap input[type="image"][name^="up"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-move-up.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-up.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -935,7 +935,7 @@ select {
 	-webkit-appearance: none;
 	appearance: none;
 	background-color: #fefefe;
-	background-image: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-view-list-expand.svg);
+	background-image: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-view-list-expand.svg);
 	background-position: right 4px center;
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
