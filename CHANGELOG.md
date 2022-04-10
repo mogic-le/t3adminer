@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [9.6.1] - 2022-04-10
+### Changed
+- Updated to Adminer 4.8.1
+
 ## [9.5.0] - 2021-02-20
 ### Changed
 - Switched to markdown in Changelog
