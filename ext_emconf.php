@@ -6,12 +6,14 @@ $EM_CONF[$_EXTKEY] = [
 	'author' => 'Jigal van Hemert',
 	'author_email' => 'jigal.van.hemert@typo3.org',
 	'author_company' => '',
-	'module' => 'mod1',
 	'state' => 'stable',
-	'uploadfolder' => 0,
-	'createDirs' => '',
-	'clearCacheOnLoad' => 0,
-	'version' => '9.6.0',
+	'clearCacheOnLoad' => false,
+	'version' => '10.0.0',
+    'autoload' => [
+        'psr-4' => [
+            'jigal\t3adminer\\' => 'Classes'
+        ],
+    ],
 	'constraints' => [
 		'depends' => [
 			'typo3' => '10.4.10-10.9.999',
