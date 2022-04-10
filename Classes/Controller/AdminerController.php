@@ -49,35 +49,35 @@ class AdminerController
         $typo3DocumentRoot = GeneralUtility::getIndpEnv('TYPO3_DOCUMENT_ROOT');
 
         // Set class config for module
-        $this->moduleConfiguration = $GLOBALS['TBE_MODULES']['_configuration']['tools_txt3adminerM1'];
+        $this->moduleConfiguration = $GLOBALS['TBE_MODULES']['_configuration']['tools_txt3adminerM1'] ?? [];
 
         // Get config
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('t3adminer');
 
         // IP-based Access restrictions
-        $devIPmask = trim($GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']);
+        $devIPmask = trim($GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] ?? '');
         $remoteAddress = GeneralUtility::getIndpEnv('REMOTE_ADDR');
 
         // Check for devIpMask restriction
-        $useDevIpMask = (bool)$extensionConfiguration['applyDevIpMask'];
+        $useDevIpMask = (bool)($extensionConfiguration['applyDevIpMask'] ?? false);
         if ($useDevIpMask && $devIPmask !== '*' && !GeneralUtility::cmpIP($remoteAddress, $devIPmask)) {
             return $this->printContent(sprintf($GLOBALS['LANG']->getLL('mlang_notindevipmask'), $remoteAddress));
         }
 
         // Check for specified IP restrictions
-        $allowedIps = trim($extensionConfiguration['IPaccess']);
+        $allowedIps = trim($extensionConfiguration['IPaccess'] ?? '');
         if (!empty($allowedIps) && !GeneralUtility::cmpIP($remoteAddress, $allowedIps)) {
             return $this->printContent(sprintf($GLOBALS['LANG']->getLL('mlang_notinipaccess'), $remoteAddress));
         }
 
         // Check export directory
-        $exportDirectory = GeneralUtility::getFileAbsFileName(trim($extensionConfiguration['exportDirectory']));
+        $exportDirectory = GeneralUtility::getFileAbsFileName(trim($extensionConfiguration['exportDirectory'] ?? ''));
         if (!is_dir($exportDirectory)) {
             $exportDirectory = GeneralUtility::getFileAbsFileName($GLOBALS['TYPO3_CONF_VARS']['BE']['fileadminDir']);
         }
 
         // Path to install dir
-        $this->moduleConfiguration['ADM_absolute_path'] = $extPath . $this->moduleConfiguration['ADM_subdir'];
+        $this->moduleConfiguration['ADM_absolute_path'] = $extPath . $this->moduleConfiguration['ADM_subdir'] ?? '';
 
         // Path to web dir
         $relativePathToAdminer = PathUtility::getAbsoluteWebPath($extPath);
@@ -88,7 +88,7 @@ class AdminerController
         . $this->moduleConfiguration['ADM_subdir'];
 
         // If t3adminer is configured in the conf.php script, we continue to load it...
-        if ($this->moduleConfiguration['ADM_absolute_path'] && @is_dir($this->moduleConfiguration['ADM_absolute_path'])) {
+        if (($this->moduleConfiguration['ADM_absolute_path'] ?? '') && @is_dir($this->moduleConfiguration['ADM_absolute_path'])) {
             session_cache_limiter('');
             // Need to have cookie visible from parent directory
             session_set_cookie_params(0, '/', '', 0);
@@ -137,7 +137,7 @@ class AdminerController
 
             // Configure some other parameters
             $_SESSION['ADM_extConf'] = $extensionConfiguration;
-            $_SESSION['ADM_hideOtherDBs'] = $extensionConfiguration['hideOtherDBs'];
+            $_SESSION['ADM_hideOtherDBs'] = $extensionConfiguration['hideOtherDBs'] ?? '';
 
             // Store TCA in the session to have extra information later on
             $_SESSION['ADM_tca'] = $GLOBALS['TCA'];
@@ -166,7 +166,7 @@ class AdminerController
                 . 'logout.php';
 
             // Prepend document root if uploadDir does not start with a slash "/"
-            $extensionConfiguration['uploadDir'] = trim($extensionConfiguration['uploadDir']);
+            $extensionConfiguration['uploadDir'] = trim($extensionConfiguration['uploadDir'] ?? '');
             if (strpos($extensionConfiguration['uploadDir'], '/') !== 0) {
                 $_SESSION['ADM_uploadDir'] = $typo3DocumentRoot . '/' . $extensionConfiguration['uploadDir'];
             } else {

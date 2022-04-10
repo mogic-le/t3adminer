@@ -40,7 +40,7 @@ class T3AdminerHooks
         if (isset($_SESSION)) {
             session_write_close();
         }
-        if ($sessionId = $_COOKIE['tx_t3adminer']) {
+        if ($sessionId = $_COOKIE['tx_t3adminer'] ?? null) {
             session_id($sessionId);
             session_start();
             unset(
