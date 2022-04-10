@@ -130,7 +130,7 @@ form table.nowrap a[href*="edit="][href*="&where"]:hover {
 }
 
 table.nowrap a[href*="edit="][href*="&where"]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-open.svg");
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-file-edit.svg");
 	content: " ";
 	display: inline-block;
 	font-size: 16px;
@@ -760,7 +760,7 @@ p.logout input {
 }
 
 .js .column a[href*="desc%5B0%5D=1"]:before {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-down.svg") no-repeat scroll 1px 4px / 10px auto;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-caret-down.svg") no-repeat scroll 1px 4px / 10px auto;
 	content: " ";
 	display: inline-block;
 	height: 16px;
@@ -865,7 +865,7 @@ table.nowrap thead input[type="image"][name^="add"]:hover {
 }
 
 table.nowrap input[type="image"][name^="down"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-down.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-caret-down.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -897,7 +897,7 @@ table.nowrap input[type="image"][name^="drop_col"]:hover {
 }
 
 table.nowrap input[type="image"][name^="up"] {
-	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-arrow-up.svg") no-repeat scroll 8px 8px #ebebeb;
+	background: url("/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-caret-up.svg") no-repeat scroll 8px 8px #ebebeb;
 	-webkit-background-size: 16px 16px;
 	background-size: 16px 16px;
 	border: 1px solid #bbbbbb;
@@ -935,7 +935,7 @@ select {
 	-webkit-appearance: none;
 	appearance: none;
 	background-color: #fefefe;
-	background-image: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-view-list-expand.svg);
+	background-image: url(/typo3/sysext/core/Resources/Public/Icons/T3Icons/svgs/actions/actions-chevron-down.svg);
 	background-position: right 4px center;
 	background-repeat: no-repeat;
 	background-size: 16px 16px;

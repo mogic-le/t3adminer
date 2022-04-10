@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Icons changed to new paths in TYPO3 (thanks to cwieske)
+
+### Changed
+- Raised minimum requirement to TYPO3 10.4.10
+
+## [9.6.0] - 2022-04-08
+### Changed
+- Updated PHP dependency to 7.2.0-7.4.999 in ext_emconf.php
+
+### Added
+- section 'extra' in composer.json to add extension key
 
 ## [9.5.0] - 2021-02-20
 ### Changed
