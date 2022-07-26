@@ -8,20 +8,7 @@ use TYPO3\CMS\Core\Http\HtmlResponse;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\PathUtility;
-use TYPO3\CMS\Core\Utility\StringUtility;
 
-/**
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
 class AdminerController
 {
     /** @var array */
@@ -82,7 +69,7 @@ class AdminerController
         // Path to web dir
         $relativePathToAdminer = PathUtility::getAbsoluteWebPath($extPath);
         $this->moduleConfiguration['ADM_relative_path'] =
-            (StringUtility::beginsWith($relativePathToAdminer, TYPO3_mainDir)
+            (str_starts_with($relativePathToAdminer, TYPO3_mainDir)
             ? substr($relativePathToAdminer, strlen(TYPO3_mainDir))
             : '../' . $relativePathToAdminer)
         . $this->moduleConfiguration['ADM_subdir'];
@@ -108,7 +95,7 @@ class AdminerController
                     case 'pdo_mysql':
                     case 'mysqli':
                         $_SESSION['ADM_driver'] = 'server';
-                        if (strpos($host, 'p:') === 0) {
+                        if (str_starts_with($host, 'p:')) {
                             $host = substr($host, 2);
                         }
                         break;
@@ -137,7 +124,7 @@ class AdminerController
 
             // Configure some other parameters
             $_SESSION['ADM_extConf'] = $extensionConfiguration;
-            $_SESSION['ADM_hideOtherDBs'] = $extensionConfiguration['hideOtherDBs'] ?? '';
+            $_SESSION['ADM_hideOtherDBs'] = $extensionConfiguration['hideOtherDBs'] ?? false;
 
             // Store TCA in the session to have extra information later on
             $_SESSION['ADM_tca'] = $GLOBALS['TCA'];
@@ -167,7 +154,7 @@ class AdminerController
 
             // Prepend document root if uploadDir does not start with a slash "/"
             $extensionConfiguration['uploadDir'] = trim($extensionConfiguration['uploadDir'] ?? '');
-            if (strpos($extensionConfiguration['uploadDir'], '/') !== 0) {
+            if (!str_starts_with($extensionConfiguration['uploadDir'], '/')) {
                 $_SESSION['ADM_uploadDir'] = $typo3DocumentRoot . '/' . $extensionConfiguration['uploadDir'];
             } else {
                 $_SESSION['ADM_uploadDir'] = $extensionConfiguration['uploadDir'];
