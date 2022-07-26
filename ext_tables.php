@@ -1,7 +1,7 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-call_user_func(function() {
+call_user_func(static function() {
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Imaging\IconRegistry::class
     );

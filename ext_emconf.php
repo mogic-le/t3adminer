@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
 	'author_company' => '',
 	'state' => 'stable',
 	'clearCacheOnLoad' => false,
-	'version' => '10.0.0',
+	'version' => '11.0.0',
     'autoload' => [
         'psr-4' => [
             'jigal\t3adminer\\' => 'Classes'
@@ -16,8 +16,8 @@ $EM_CONF[$_EXTKEY] = [
     ],
 	'constraints' => [
 		'depends' => [
-			'typo3' => '10.4.10-10.9.999',
-            'php' => '7.2.0-7.4.999',
+			'typo3' => '11.5.0-11.9.999',
+            'php' => '7.4.0-8.1.999',
         ],
 		'conflicts' => [],
 		'suggests' => [],
