@@ -75,6 +75,10 @@ EOT;
                 if (in_array('date', $evalOptions, true) || in_array('datetime', $evalOptions, true)) {
                     $return = '<span class="datetimefield">' . $return . '</span>';
                 }
+            } elseif ($tcaConfiguration['type'] === 'datetime') {
+                $return = '<span class="datetimefield">' . $return . '</span>';
+            } elseif ($tcaConfiguration['type'] === 'input' && ($tcaConfiguration['renderType'] ?? '') === 'inputDateTime') {
+                $return = '<span class="datetimefield">' . $return . '</span>';
             }
         }
 

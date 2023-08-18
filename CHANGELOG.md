@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [12.0.0] - 2023-08-18
+### Fixed
+- v11 renderType and v12 type for datetime fields are now rendered as readable dates
+- Styling with Adminer 4.8.2
+
+### Added
+- Compatibility with TYPO3 v12
+- Compatibility with PHP 8.2
+
+### Changed
+- Updated to Adminer 4.8.2 (new maintainer)
+- Core icons are now inline in CSS
+- Updated syntax in XLIFF files
+- Icon registration compatible with v11/12
+
 ## [11.0.0] - 2022-07-26
 ### Fixed
 - Version 11.0.0 released

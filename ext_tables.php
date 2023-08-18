@@ -1,16 +1,8 @@
 <?php
-defined('TYPO3_MODE') or die();
+defined('TYPO3') or die();
 
 call_user_func(static function() {
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Imaging\IconRegistry::class
-    );
-    $iconRegistry->registerIcon(
-        'adminer-module',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:t3adminer/Resources/Public/Icons/module-adminer.svg']
-    );
-
+    // registration for v11
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule(
         'tools',
         'txt3adminerM1',
