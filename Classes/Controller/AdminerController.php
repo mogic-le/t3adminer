@@ -20,7 +20,7 @@ class AdminerController
     public function __construct()
     {
         $GLOBALS['LANG']->includeLLFile('EXT:t3adminer/Resources/Private/Language/locallang.xlf');
-        $this->moduleConfiguration = $GLOBALS['TBE_MODULES']['_configuration']['tools_txt3adminerM1'];
+        $this->initializeModuleConfiguration();
     }
 
     /**
@@ -36,7 +36,7 @@ class AdminerController
         $typo3DocumentRoot = GeneralUtility::getIndpEnv('TYPO3_DOCUMENT_ROOT');
 
         // Set class config for module
-        $this->moduleConfiguration = $GLOBALS['TBE_MODULES']['_configuration']['tools_txt3adminerM1'] ?? [];
+        $this->initializeModuleConfiguration();
 
         // Get config
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('t3adminer');
@@ -233,6 +233,15 @@ class AdminerController
         $moduleTemplate->setContent($content);
 
         return new HtmlResponse($this->content);
+    }
+
+    private function initializeModuleConfiguration(): void
+    {
+        $this->moduleConfiguration = $GLOBALS['TBE_MODULES']['_configuration']['tools_txt3adminerM1']
+            ?? [
+                'ADM_subdir' => 'Resources/Public/Adminer/',
+                'ADM_script' => 't3adminer.php',
+            ];
     }
 
 }
