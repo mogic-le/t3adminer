@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Changelog can now be included in reST documentation (Thankss to Martin Bless)
+
+### Added
+
+- Documentation in reST format
+- Links in Changelog to differences between version in GitLab
+
+### Removed
+
+- Old documentation in OpenOffice.org format
+
+### Fixed
+
+- Format of CHANGELOG.md
+
 ## [12.0.0] - 2023-08-18
 
 ### Fixed
@@ -433,3 +452,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - initial code generated with kickstarter
+
+[Unreleased]: https://gitlab.com/jigal/t3adminer/-/compare/12.0.0...master?from_project_id=1185517&straight=false
+[12.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/11.0.0...12.0.0?from_project_id=1185517&straight=false
+[11.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/10.0.1...11.0.0?from_project_id=1185517&straight=false
+[10.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/10.0.0...10.0.1?from_project_id=1185517&straight=false
+[10.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.6.0...10.0.0?from_project_id=1185517&straight=false
+[9.6.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.5.0...9.6.0?from_project_id=1185517&straight=false
+[9.5.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.4.1...9.5.0?from_project_id=1185517&straight=false
+[9.4.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.4.0...9.4.1?from_project_id=1185517&straight=false
+[9.4.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.3.0...9.4.0?from_project_id=1185517&straight=false
+[9.3.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.2.1...9.3.0?from_project_id=1185517&straight=false
+[9.2.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.1.0...9.2.1?from_project_id=1185517&straight=false
+[9.1.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.0.1...9.1.0?from_project_id=1185517&straight=false
+[9.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.0.0...9.0.1?from_project_id=1185517&straight=false
+[9.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/8.0.1...9.0.0?from_project_id=1185517&straight=false
+[8.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/8.0.0...8.0.1?from_project_id=1185517&straight=false
+[8.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/7.0.10...8.0.0?from_project_id=1185517&straight=false

@@ -2,4 +2,7 @@
 
 .. _changelog:
 
-.. include:: ./CHANGELOG.md
+.. converted from Markdown:
+   pandoc --from markdown --to rst CHANGELOG.md -o CHANGELOG.rst
+
+.. include:: ./CHANGELOG.rst
