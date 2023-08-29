@@ -57,7 +57,7 @@ Database tools should not be used in production environments! t3adminer is meant
     AdditionalFeatures/Index
     KnownProblems/Index
     HowToGetHelp/Index
-    Changelog/Index
+    Changelog/CHANGELOG
 
 ..  Meta Menu
 
