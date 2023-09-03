@@ -1,5 +1,8 @@
 <?php
-namespace jigal\t3adminer\Hooks;
+
+declare(strict_types=1);
+
+namespace Jigal\T3adminer\Hooks;
 
 use TYPO3\CMS\Core\Authentication\AbstractUserAuthentication;
 
@@ -13,7 +16,8 @@ class T3AdminerHooks
      * @param AbstractUserAuthentication $parentObject
      * @return void
      */
-    public function logoffHook(&$parameters, AbstractUserAuthentication $parentObject) {
+    public function logoffHook(&$parameters, AbstractUserAuthentication $parentObject): void
+    {
         if (isset($_SESSION)) {
             session_write_close();
         }
@@ -27,10 +31,10 @@ class T3AdminerHooks
                 $_SESSION['ADM_password'],
                 $_SESSION['ADM_server'],
                 $_SESSION['ADM_db'],
+                $_SESSION['ADM_tca'],
                 $_SESSION['ADM_extConf'],
                 $_SESSION['ADM_hideOtherDBs'],
                 $_SESSION['ADM_SignonURL'],
-                $_SESSION['ADM_LogoutURL'],
                 $_SESSION['ADM_uploadDir']
             );
             session_write_close();

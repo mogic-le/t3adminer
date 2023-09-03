@@ -5,24 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [12.0.1] - 2023-09-03
 
 ### Changed
 
 - Changelog can now be included in reST documentation (Thankss to Martin Bless)
+- Refactored controller
+- Moved error messages to locallang file
+- Use LanguageService->sL() instead of deprecated getLL()
 
 ### Added
 
-- Documentation in reST format
+- Documentation in reST format (also rendered on docs.typo3.org)
 - Links in Changelog to differences between version in GitLab
+- README.md
 
 ### Removed
 
 - Old documentation in OpenOffice.org format
+- Lots of unused code in AdminController
+- README.txt
 
 ### Fixed
 
 - Format of CHANGELOG.md
+- Calculation of path to adminer now relies soly on core functions and works with 
+both paths like `typo3conf/ext/` and `/_assets/<hash>`
 
 ## [12.0.0] - 2023-08-18
 
