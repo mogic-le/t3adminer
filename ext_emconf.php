@@ -7,10 +7,10 @@ $EM_CONF[$_EXTKEY] = [
 	'author_email' => 'jigal.van.hemert@typo3.org',
 	'author_company' => '',
 	'state' => 'stable',
-	'version' => '12.0.0',
+	'version' => '12.0.1',
     'autoload' => [
         'psr-4' => [
-            'jigal\t3adminer\\' => 'Classes'
+            'Jigal\T3adminer\\' => 'Classes'
         ],
     ],
 	'constraints' => [

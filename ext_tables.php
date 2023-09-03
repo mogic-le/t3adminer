@@ -9,13 +9,11 @@ call_user_func(static function() {
         '',
         null,
         [
-            'routeTarget' => jigal\t3adminer\Controller\AdminerController::class . '::main',
+            'routeTarget' => Jigal\T3adminer\Controller\AdminerController::class . '::main',
             'access' => 'systemMaintainer',
             'name' => 'tools_txt3adminerM1',
             'labels' => 'LLL:EXT:t3adminer/Resources/Private/Language/locallang_mod.xlf',
             'iconIdentifier' => 'adminer-module',
-            'ADM_subdir' => 'Resources/Public/Adminer/',
-            'ADM_script' => 't3adminer.php',
         ]
     );
 });

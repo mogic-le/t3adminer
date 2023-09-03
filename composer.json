@@ -6,7 +6,12 @@
     "TYPO3",
     "database",
     "Adminer",
-    "phpMyAdmin"
+    "phpMyAdmin",
+    "dev",
+    "mysql",
+    "sqlite",
+    "mariadb",
+    "postgresq"
   ],
   "homepage": "https://forge.typo3.org/projects/extension-t3adminer",
   "support": {
@@ -28,7 +33,7 @@
   },
   "autoload": {
     "psr-4": {
-      "jigal\\t3adminer\\": "Classes/"
+      "Jigal\\T3adminer\\": "Classes/"
     }
   },
   "extra": {

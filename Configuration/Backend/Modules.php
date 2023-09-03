@@ -2,6 +2,7 @@
 
 return [
     't3adminer' => [
+        'standalone' => true,
         'parent' => 'tools',
         'access' => 'systemMaintainer',
         'path' => '/module/t3adminer',
@@ -9,7 +10,7 @@ return [
         'labels' => 'LLL:EXT:t3adminer/Resources/Private/Language/locallang_mod.xlf',
         'routes' => [
             '_default' => [
-                'target' => \jigal\t3adminer\Controller\AdminerController::class . '::main',
+                'target' => \Jigal\T3adminer\Controller\AdminerController::class . '::main',
             ],
         ],
     ],
