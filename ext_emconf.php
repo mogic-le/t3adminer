@@ -7,7 +7,7 @@ $EM_CONF[$_EXTKEY] = [
 	'author_email' => 'jigal.van.hemert@typo3.org',
 	'author_company' => '',
 	'state' => 'stable',
-	'version' => '12.0.1',
+	'version' => '12.0.2',
     'autoload' => [
         'psr-4' => [
             'Jigal\T3adminer\\' => 'Classes'
@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = [
 	'constraints' => [
 		'depends' => [
 			'typo3' => '11.5.0-12.9.999',
-            'php' => '7.4.0-8.2.999',
+            'php' => '7.4.0-8.3.999',
         ],
 		'conflicts' => [],
 		'suggests' => [],
