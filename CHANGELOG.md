@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [12.0.2] - 2024-09-13
+
+### Fixed
+
+- Prevented exception if key 'port' is missing from TYPO3 database settings
+
+### Changed
+
+- Simplified code a bit to improve readability
+
 ## [12.0.1] - 2023-09-03
 
 ### Changed
@@ -29,8 +39,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Format of CHANGELOG.md
-- Calculation of path to adminer now relies soly on core functions and works with 
-both paths like `typo3conf/ext/` and `/_assets/<hash>`
+- Calculation of path to adminer now relies soly on core functions and works with
+  both paths like `typo3conf/ext/` and `/_assets/<hash>`
 
 ## [12.0.0] - 2023-08-18
 
@@ -119,7 +129,7 @@ both paths like `typo3conf/ext/` and `/_assets/<hash>`
 
 ### Changed
 
-- Update to Adminer 4.7.6 
+- Update to Adminer 4.7.6
 - Compatible with TYPO3 9.5 and 10.0
 - Clean up of session data on logout (thanks to Lex Frolenko)
 
@@ -144,7 +154,7 @@ both paths like `typo3conf/ext/` and `/_assets/<hash>`
 - Update to Adminer 4.6.3
 - Used new APIs from TYPO3 v9
 - Cleaned up some variable names
-  
+
 ### Removed
 
 - Removed usage of deprecated function (and thus only support TYPO3 v9 in this release)
@@ -436,7 +446,8 @@ both paths like `typo3conf/ext/` and `/_assets/<hash>`
 
 ### Added
 
-- made styling of table list similar to pagetree (active item only working in IE / Safari because Firefox / Chrome use Ajax
+- made styling of table list similar to pagetree (active item only working in IE / Safari because Firefox / Chrome use
+  Ajax
   call to only load content block)
 - [feature] two options for IP restriction added
 
@@ -462,18 +473,33 @@ both paths like `typo3conf/ext/` and `/_assets/<hash>`
 - initial code generated with kickstarter
 
 [Unreleased]: https://gitlab.com/jigal/t3adminer/-/compare/12.0.0...master?from_project_id=1185517&straight=false
+
 [12.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/11.0.0...12.0.0?from_project_id=1185517&straight=false
+
 [11.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/10.0.1...11.0.0?from_project_id=1185517&straight=false
+
 [10.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/10.0.0...10.0.1?from_project_id=1185517&straight=false
+
 [10.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.6.0...10.0.0?from_project_id=1185517&straight=false
+
 [9.6.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.5.0...9.6.0?from_project_id=1185517&straight=false
+
 [9.5.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.4.1...9.5.0?from_project_id=1185517&straight=false
+
 [9.4.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.4.0...9.4.1?from_project_id=1185517&straight=false
+
 [9.4.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.3.0...9.4.0?from_project_id=1185517&straight=false
+
 [9.3.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.2.1...9.3.0?from_project_id=1185517&straight=false
+
 [9.2.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.1.0...9.2.1?from_project_id=1185517&straight=false
+
 [9.1.0]: https://gitlab.com/jigal/t3adminer/-/compare/9.0.1...9.1.0?from_project_id=1185517&straight=false
+
 [9.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/9.0.0...9.0.1?from_project_id=1185517&straight=false
+
 [9.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/8.0.1...9.0.0?from_project_id=1185517&straight=false
+
 [8.0.1]: https://gitlab.com/jigal/t3adminer/-/compare/8.0.0...8.0.1?from_project_id=1185517&straight=false
+
 [8.0.0]: https://gitlab.com/jigal/t3adminer/-/compare/7.0.10...8.0.0?from_project_id=1185517&straight=false

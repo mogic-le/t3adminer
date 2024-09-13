@@ -79,7 +79,9 @@ class AdminerController
         $_SESSION['exportDirectory'] = $exportDirectory;
         // Detect DBMS
         $_SESSION['ADM_driver'] = 'server';
-        $host = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['host'];
+        $host = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['host'] ?? '';
+        $port = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port'] ?? '';
+        $hostAndPort = $host . ($port ? ':' . $port : '');
         if (isset($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['driver'])) {
             switch ($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['driver']) {
                 case 'pdo_mysql':
@@ -106,11 +108,11 @@ class AdminerController
         // Store there credentials in the session
         $_SESSION['ADM_user'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user'];
         $_SESSION['pwds'][$_SESSION['ADM_driver']][][$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user']] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'];
-        $_SESSION['pwds'][$_SESSION['ADM_driver']][$host . ':' . $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port']][$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user']] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'];
+        $_SESSION['pwds'][$_SESSION['ADM_driver']][$hostAndPort][$GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user']] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'];
         $_SESSION['ADM_password'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['password'];
         $_SESSION['ADM_server'] = $host;
-        $_SESSION['ADM_port'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port'];
-        $_SESSION['ADM_db'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname'];
+        $_SESSION['ADM_port'] = $port;
+        $_SESSION['ADM_db'] = $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname'] ?? '';
 
         // Configure some other parameters
         $_SESSION['ADM_extConf'] = $this->extensionConfiguration;
@@ -144,17 +146,10 @@ class AdminerController
         $languageKey = self::LANG_KEY_MAP[$this->getLanguageService()->lang] ?? $this->getLanguageService()->lang ?? 'en';
 
         // Redirect to adminer (should use absolute URL here!), setting default database
-        $redirectUri = $_SESSION['ADM_SignonURL'] . '?lang=' . $languageKey . '&db='
-            . rawurlencode($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname']) . '&'
-            . rawurlencode($_SESSION['ADM_driver']) . '='
-            . rawurlencode(
-                $host
-                . (
-                $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port']
-                    ? ':' . $GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['port']
-                    : ''
-                )
-            ) . '&username=' . rawurlencode($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user']);
+        $redirectUri = $_SESSION['ADM_SignonURL'] . '?lang=' . $languageKey
+            . '&db=' . rawurlencode($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['dbname'])
+            . '&' . rawurlencode($_SESSION['ADM_driver']) . '=' . rawurlencode($hostAndPort)
+            . '&username=' . rawurlencode($GLOBALS['TYPO3_CONF_VARS']['DB']['Connections']['Default']['user']);
         if ($_SESSION['ADM_driver'] !== 'server') {
             $redirectUri .= '&driver=' . rawurlencode($_SESSION['ADM_driver']);
         }
