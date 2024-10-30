@@ -167,18 +167,16 @@ class AdminerController
     /**
      * Prints out the module HTML or returns it in an HtmlResponse object
      *
-     * @TODO Replace deprecated code
-     *
      * @param string $content Content body as formatted HTML
-     * @return \TYPO3\CMS\Core\Http\HtmlResponse
+     * @return \Psr\Http\Message\ResponseInterface
      */
-    public function printContent(ServerRequestInterface $request, $content): HtmlResponse
+    public function printContent(ServerRequestInterface $request, $content): ResponseInterface
     {
         $moduleTemplate = $this->moduleTemplateFactory->create($request);
         $moduleTemplate->setTitle($this->getLanguageService()->sL(self::LANGUAGE_PREFIX . 'title'));
-        $moduleTemplate->setContent($content);
+        $moduleTemplate->assign('content', $content);
 
-        return new HtmlResponse($moduleTemplate->renderContent());
+        return $moduleTemplate->renderResponse('Error');
     }
 
     private function checkAccessByIP(): string

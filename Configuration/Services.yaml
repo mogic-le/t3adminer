@@ -9,3 +9,8 @@ services:
 
   Jigal\T3adminer\Controller\AdminerController:
     tags: ['backend.controller']
+
+  Jigal\T3adminer\EventListener\AfterUserLoggedOut:
+    tags:
+      - name: event.listener
+        identifier: 'T3adminerAfterUserLoggedOut'
