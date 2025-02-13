@@ -14,3 +14,9 @@ services:
     tags:
       - name: event.listener
         identifier: 'T3adminerAfterUserLoggedOut'
+
+  Jigal\T3adminer\EventListener\BeforeUserLogout:
+    tags:
+      - name: event.listener
+        identifier: 'T3adminerAfterUserLoggedOut'
+
