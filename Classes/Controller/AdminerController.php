@@ -62,6 +62,9 @@ class AdminerController
             return $this->printContent($request, $error);
         }
 
+        //store the session save path for logout
+        $GLOBALS['BE_USER']->setAndSaveSessionData('t3adminer_session_savepath', session_save_path());
+
         session_cache_limiter('');
         // Need to have cookie visible from parent directory
         session_set_cookie_params(0, '/', '', false);
