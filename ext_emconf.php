@@ -13,12 +13,12 @@ $EM_CONF[$_EXTKEY] = [
             'Jigal\T3adminer\\' => 'Classes'
         ],
     ],
-	'constraints' => [
-		'depends' => [
-			'typo3' => '11.5.0-13.4.99',
-            'php' => '7.4.0-8.3.99',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '11.5.0-13.4.99',
+            'php' => '7.4.0-8.4.99',
         ],
-		'conflicts' => [],
-		'suggests' => [],
+        'conflicts' => [],
+        'suggests' => [],
     ],
 ];
