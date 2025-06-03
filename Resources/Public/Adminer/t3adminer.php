@@ -112,9 +112,9 @@ function adminer_object()
                     echo '-active';
                 }
                 echo '">';
-                echo '<a href="' . h(ME) . 'select=' . urlencode($table) . '"' . bold($_GET['select'] == $table) . ">" .
-                    lang('select') . "</a> ";
-                echo '<a href="' . h(ME) . 'table=' . urlencode($table) . '"' . bold($_GET['table'] == $table) . ">" .
+                echo '<a href="' . Adminer\h(Adminer\ME) . 'select=' . urlencode($table) . '"' . Adminer\bold($_GET['select'] == $table) . ">" .
+					Adminer\lang('select') . "</a> ";
+                echo '<a href="' . Adminer\h(Adminer\ME) . 'table=' . urlencode($table) . '"' . Adminer\bold($_GET['table'] == $table) . ">" .
                     $this->tableName(['Name' => $table]) . "</a></span>\n";
                 //! Adminer::tableName may work with full table status
             }
@@ -129,9 +129,9 @@ function adminer_object()
         public function homepage()
         {
             echo '<p class="tabs">' .
-                ($_GET['ns'] == '' ? '<a href="' . h(ME) . 'database=">' . lang('Alter database') . "</a>\n" : '');
-            if (support('scheme')) {
-                echo '<a href="' . h(ME) . 'scheme=">' . ($_GET['ns'] != '' ? lang('Alter schema') : lang('Create schema')) .
+                ($_GET['ns'] == '' ? '<a href="' . Adminer\h(Adminer\ME) . 'database=">' . Adminer\lang('Alter database') . "</a>\n" : '');
+            if (Adminer\support('scheme')) {
+                echo '<a href="' . Adminer\h(Adminer\ME) . 'scheme=">' . ($_GET['ns'] != '' ? Adminer\lang('Alter schema') : Adminer\lang('Create schema')) .
                     "</a>\n";
             }
 

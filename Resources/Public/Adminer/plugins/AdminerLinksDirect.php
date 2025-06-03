@@ -16,7 +16,7 @@ class AdminerLinksDirect
      */
     public function selectLink($val, $field)
     {
-        if (is_url($val)) {
+        if (Adminer\is_url($val)) {
             return $val;
         }
     }

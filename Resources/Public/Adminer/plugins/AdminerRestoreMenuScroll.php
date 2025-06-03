@@ -40,7 +40,7 @@ EOT;
 
     public function head()
     {
-        echo script($this->script);
+        echo Adminer\script($this->script);
     }
 
 }

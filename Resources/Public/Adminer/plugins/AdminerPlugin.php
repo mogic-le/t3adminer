@@ -7,7 +7,7 @@
  * @license https://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @license https://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
  */
-class AdminerPlugin extends Adminer
+class AdminerPlugin extends Adminer\Adminer
 {
     /** @access protected */
     var $plugins;
@@ -199,15 +199,16 @@ class AdminerPlugin extends Adminer
         return $this->_applyPlugin(__FUNCTION__, $args);
     }
 
-    function csp()
+    function csp(array $lb)
     {
         $args = func_get_args();
 
         return $this->_applyPlugin(__FUNCTION__, $args);
     }
 
-    function head()
+    function head($Mb = null)
     {
+		parent::head();
         $args = func_get_args();
 
         return $this->_applyPlugin(__FUNCTION__, $args);
@@ -332,14 +333,14 @@ class AdminerPlugin extends Adminer
         return $this->_applyPlugin(__FUNCTION__, $args);
     }
 
-    function tableStructurePrint($fields)
+    function tableStructurePrint(array $o, $xi = null)
     {
         $args = func_get_args();
 
         return $this->_applyPlugin(__FUNCTION__, $args);
     }
 
-    function tableIndexesPrint($indexes)
+    function tableIndexesPrint(array $x, array $xi)
     {
         $args = func_get_args();
 
