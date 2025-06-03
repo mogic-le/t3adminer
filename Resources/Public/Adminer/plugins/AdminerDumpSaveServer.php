@@ -42,7 +42,7 @@ class AdminerDumpSaveServer
     public static function _redirect($location, $message = null)
     {
         if ($message !== null) {
-            restart_session();
+			Adminer\restart_session();
             $_SESSION['messages'][preg_replace('~^[^?]*~', '', ($location !== null ? $location : $_SERVER['REQUEST_URI']))][] =
                 $message;
         }
@@ -64,9 +64,9 @@ class AdminerDumpSaveServer
                 header('Content-Disposition:');
                 header('Content-Type:');
             }
-            $file = $this->dir . $this->fileName;
+            $file = $this->dir . '/' .  $this->fileName;
             file_put_contents($file, $string);
-            self::_redirect(remove_from_uri(), lang('Webserver file %s', htmlspecialchars($file)));
+            self::_redirect(Adminer\remove_from_uri(), Adminer\lang('Webserver file %s', htmlspecialchars($file)));
 
             return '';
         }
