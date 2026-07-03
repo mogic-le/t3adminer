@@ -1,3 +1,11 @@
+# Fork
+This is a fork of the jigal/t3adminer.
+It has Typo3 v13.x support: https://gitlab.com/jigal/t3adminer/-/work_items/31
+
+> [!info] Delete this if jigal/t3adminer gets a typo3 13.x update.
+
+---
+
 [![Latest Stable Version](https://poser.pugx.org/jigal/t3adminer/v/stable)](https://extensions.typo3.org/extension/t3adminer/)
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg?style=flat-square)](https://get.typo3.org/version/11)
 [![TYPO3 12](https://img.shields.io/badge/TYPO3-12-orange.svg?style=flat-square)](https://get.typo3.org/version/12)
